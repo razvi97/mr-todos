@@ -1,0 +1,19 @@
+{
+  "name": "mr-todos",
+  "version": "1.0.0",
+  "description": "Demyst code Exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razvi97/mr-todos.git"
+  },
+  "author": "Marius Razvan Pavel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/razvi97/mr-todos/issues"
+  },
+  "homepage": "https://github.com/razvi97/mr-todos#readme"
+}
