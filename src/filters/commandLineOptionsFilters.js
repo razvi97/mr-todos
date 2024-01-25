@@ -5,6 +5,7 @@ const { program } = require('commander');
 // FIRST WE FILTER IF USER ENTERED EVEN OR ODD, COMPLETED OR NOT.
 // THEN WE FILTER BY QUANTITY
 exports.filterTodos = function filterTodos(options, todo_list){
+    console.log(todo_list)
     var output = ""
     console.log(options)
     
@@ -44,7 +45,7 @@ exports.filterTodos = function filterTodos(options, todo_list){
         if(!options.number.match(/^[1-9]\d*$/)){
             throw program.error("error: option '-n, --number <number>, Needs to be an integer")
         }else{
-            output += " Filter " + options.number
+            output += ` Filter ${options.number}`
         }
 
     }
