@@ -63,6 +63,7 @@ exports.getMaxIdsFromArray = function getMaxIdsFromArray(array, quantity){
 
 }
 
+// RETURN ARRAY WITH ONLY COMPLETED ITEMS
 exports.getCompletedIdsFromArray = function getCompletedIdsFromArray(array, completed){
 
     // VALIDATE IF PARAMETERS IS AN ARRAY
