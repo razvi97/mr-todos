@@ -5,11 +5,11 @@ A CLI that filters and returns TODO's.
 
 ## Installation
 
-Ensure you have Node.js installed, then download or clone the repository in your PC and start the project using.
+Ensure you have Node.js installed and npm package manager, then download or clone the repository in your PC and start the project using the below command.
 This command needs to be executed only once at the beginning, as it automatically installs all necessary dependencies and creates the CLI link.
 
 ```
-npm initialize
+npm start
 ```
 
 ### *OPTIONS NEEDED TO RETURN THE DATA ACCORDING TO THE EXERCISE REQUIREMENTS*
