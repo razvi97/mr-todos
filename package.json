@@ -4,7 +4,7 @@
   "description": "Demyst code Exercise",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "npm install && npm link"
   },
   "repository": {
@@ -19,10 +19,10 @@
   "homepage": "https://github.com/razvi97/mr-todos#readme",
   "dependencies": {
     "commander": "^11.1.0",
-    "dotenv": "^16.4.1"
+    "dotenv": "^16.4.1",
+    "mocha": "^10.2.0"
   },
-  "bin":{
+  "bin": {
     "mr-todos": "index.js"
   }
- 
 }

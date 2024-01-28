@@ -7,13 +7,22 @@ exports.getEvenIdsFromArray = function getEvenIdsFromArray(array){
 
     // VALIDATE IF PARAMETERS IS AN ARRAY
     if(!Array.isArray(array)){
-        throw program.error("error: 'array' needs to be an Array")
+        throw new Error("error: 'array' needs to be an Array")
 
     }
 
     var new_array = []
 
     array.map((obj, index) => {
+
+        if(!Object.keys(obj).includes('id')){
+            throw new Error("error: Object doesn't contain id")
+        }
+
+        if(!String(obj.id).match(/^[0-9]\d*$/)){
+            throw new Error("error: Id is not an integer")
+        }
+
         if(nu.isEven(obj.id)){
             new_array.push(obj)
         }
@@ -28,13 +37,22 @@ exports.getOddIdsFromArray = function getOddIdsFromArray(array){
 
     // VALIDATE IF PARAMETERS IS AN ARRAY
     if(!Array.isArray(array)){
-        throw program.error("error: 'array' needs to be an Array")
+        throw new Error("error: 'array' needs to be an Array")
 
     }
 
     var new_array = []
 
     array.map((obj, index) => {
+
+        if(!Object.keys(obj).includes('id')){
+            throw new Error("error: Object doesn't contain id")
+        }
+
+        if(!String(obj.id).match(/^[0-9]\d*$/)){
+            throw new Error("error: Id is not an integer")
+        }
+
         if(!nu.isEven(obj.id)){
             new_array.push(obj)
         }
@@ -48,14 +66,14 @@ exports.getOddIdsFromArray = function getOddIdsFromArray(array){
 exports.getMaxIdsFromArray = function getMaxIdsFromArray(array, quantity){
 
     // VALIDATE IF PARAMETER QUANTITY IS AN INTEGER
-    if(!quantity.match(/^[1-9]\d*$/)){
-        throw program.error("error: 'quantity' needs to be a number")
+    if(!String(quantity).match(/^[1-9]\d*$/)){
+        throw new Error("error: 'quantity' needs to be a number")
  
     }
 
     // VALIDATE IF PARAMETERS IS AN ARRAY
     if(!Array.isArray(array)){
-        throw program.error("error: 'array' needs to be an Array")
+        throw new Error("error: 'array' needs to be an Array")
 
     }
 
@@ -68,8 +86,12 @@ exports.getCompletedIdsFromArray = function getCompletedIdsFromArray(array, comp
 
     // VALIDATE IF PARAMETERS IS AN ARRAY
     if(!Array.isArray(array)){
-        throw program.error("error: 'array' needs to be an Array")
+        throw new Error("error: 'array' needs to be an Array")
 
+    }
+
+    if(completed !== true && completed !== false){
+        throw new Error("error: 'completed' is not a boolean")
     }
 
     var new_array = []
