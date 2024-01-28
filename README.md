@@ -72,3 +72,9 @@ Example:
 ```
 mr-todos -c true
 ```
+
+## Tests
+To run tests enter the following command:
+```
+npm test
+```
